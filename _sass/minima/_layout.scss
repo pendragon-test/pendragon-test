@@ -22,10 +22,6 @@
   }
 }
 
-header {
-  margin-top: 16px;
-}
-
 .site-nav {
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
@@ -214,10 +210,6 @@ header {
 /**
  * Posts
  */
-.post-header {
-  margin-bottom: $spacing-unit;
-}
-
 .post-title {
   @include relative-font-size(2.625);
   letter-spacing: -1px;
