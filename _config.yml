@@ -5,6 +5,9 @@ collections:
   posts:
     title: Posts
     output: true
+  santa-claire:
+    title: Santa claire
+    output: true
   uploads:
     title: Uploads
     output: true
