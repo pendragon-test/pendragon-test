@@ -1,6 +1,7 @@
 ---
 title: Santa claire 1
 date: 2025-06-07 23:34:00 Z
+layout: post
 ---
 
 ## Lorem ipsum
