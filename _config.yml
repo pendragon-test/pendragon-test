@@ -2,14 +2,17 @@
 title: Pendragon
 timezone: UTC
 collections:
+  other-stories:
+    title: Other stories
+    output: true
   posts:
     title: Posts
     output: true
   santa-claire:
     title: Santa Claire
     output: true
-  other-stories:
-    title: Other stories
+  uploads:
+    title: Uploads
     output: true
 email: your-email@example.com
 description: Write an awesome description for your new site here. You can edit this
