@@ -9,10 +9,7 @@ collections:
     title: Posts
     output: true
   santa-claire:
-    title: Santa claire
-    output: true
-  uploads:
-    title: Uploads
+    title: "Santa claire"
     output: true
 email: your-email@example.com
 description: Write an awesome description for your new site here. You can edit this
