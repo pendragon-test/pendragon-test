@@ -14,6 +14,7 @@ collections:
   santa-claire:
     title: Santa Claire
     output: true
+    sort_by: date
   uploads:
     title: Uploads
     output: true
