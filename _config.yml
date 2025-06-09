@@ -33,6 +33,19 @@ header_pages:
 - vectors.md
 - rasters.md
 - vtubers.md
+defaults:
+  -
+    scope:
+      path: ""
+      type: santa-claire
+    values:
+      layout: post
+  -
+    scope:
+      path: ""
+      type: other-stories
+    values:
+      layout: post
 exclude:
 - ".sass-cache/"
 - ".jekyll-cache/"

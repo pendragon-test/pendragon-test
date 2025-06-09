@@ -1,6 +1,8 @@
 ---
 title: Rasters
-layout: page
+layout: default
 ---
+
+# ![Rasters](/uploads/rasters word.svg)
 
 {% include gallery-layout.html folder="/images/rasters" %}
