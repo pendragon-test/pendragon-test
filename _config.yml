@@ -5,11 +5,9 @@ collections:
   other-stories:
     title: Other stories
     output: true
+    sort_by: date
   posts:
     title: Posts
-    output: true
-  rasters:
-    title: Rasters
     output: true
   santa-claire:
     title: Santa Claire
@@ -17,9 +15,6 @@ collections:
     sort_by: date
   uploads:
     title: Uploads
-    output: true
-  vectors:
-    title: Vectors
     output: true
 email: your-email@example.com
 description: Write an awesome description for your new site here. You can edit this
