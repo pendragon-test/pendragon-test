@@ -25,6 +25,19 @@ url:
 twitter_username: jekyllrb
 github_username: jekyll
 theme: minima
+defaults:
+  -
+    scope:
+      path: ""
+      type: santa-claire
+    values:
+      layout: post
+  -
+    scope:
+      path: ""
+      type: other-stories
+    values:
+      layout: post
 plugins:
 - jekyll-feed
 header_pages:
