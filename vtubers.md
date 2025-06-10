@@ -1,6 +1,6 @@
 ---
-title: Vtubers
-layout: page
+title: VTubers
+layout: default
 ---
 
-hello
+# ![Vtubers](/uploads/vtuber word.png)
