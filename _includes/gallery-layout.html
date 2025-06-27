@@ -26,16 +26,31 @@ $(document).ready(function() {
   });
 
   gallery.isotope({
-    percentPosition: true,
-    columnWidth: '#gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}',
+    layoutMode: "masonryHorizontal",
+    masonryHorizontal: {
+      rowHeight: 50,
+    },
+
+    //rowHeight: '#gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}',
     itemSelector: '.image-wrapper',
-    layoutMode: "masonry"
+  });
+
+  gallery.imagesLoaded().progress( function() {
+    gallery.isotope('layout');
   });
 });
 </script>
 <style>
 .image-wrapper {
-  max-width: 20%;
+  width: 20%;
   padding: 8px;
+  border: 1px red solid;
+}
+
+.image-gallery {
+  height: 480px;
+  overflow-x: scroll;
+  overflow-y: visible;
+  max-width: 740px;
 }
 </style>

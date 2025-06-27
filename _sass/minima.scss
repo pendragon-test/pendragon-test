@@ -53,7 +53,7 @@ $on-laptop:        800px !default;
   "minima/syntax-highlighting"
 ;
 
-// Stuff I added, not sure how to organize sass yet
+// Stuff I added, not sure how best to organize scss yet
 .site-title img {
   width: 48px;
 }
@@ -62,6 +62,18 @@ header {
   //background-color: #d6b126;
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+// Scrollbar styling
+body {
+  scrollbar-color: #49c3dc #efb2b2;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 10px;
+  background: #AAA;
 }
 
 // Title images
