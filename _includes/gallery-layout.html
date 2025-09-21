@@ -18,52 +18,78 @@
 
 <script>
 $(document).ready(function() {
-  let gallery = $("#image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}")
-
   lightGallery(document.getElementById('image-gallery'), {
     thumbnail: false,
     selector: '.image'
   });
 
-  gallery.isotope({
-    layoutMode: "masonryHorizontal",
-    masonryHorizontal: {
-      rowHeight: 50,
-    },
+  // Masonry layout with CSS Grid
+  function resizeGridItem(item) {
+    const img = item.querySelector('img');
+    if (!img || !img.complete) return;
 
-    //rowHeight: '#gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}',
-    itemSelector: '.image-wrapper',
+    const rowHeight = 10; // matches grid-auto-rows
+    const rowGap = 8; // matches gap
+    const imgHeight = img.naturalHeight;
+    const imgWidth = img.naturalWidth;
+    const containerWidth = item.offsetWidth;
+
+    // Calculate scaled height based on container width
+    const scaledHeight = (imgHeight * containerWidth) / imgWidth;
+    const rowSpan = Math.ceil(scaledHeight / (rowHeight + rowGap));
+
+    item.style.gridRowEnd = `span ${rowSpan}`;
+  }
+
+  function resizeAllGridItems() {
+    setTimeout(() => {
+      const allItems = document.querySelectorAll('.image-wrapper');
+      allItems.forEach(resizeGridItem);
+    }, 100);
+  }
+
+  // Resize items when images load
+  const images = document.querySelectorAll('.image-wrapper img');
+  images.forEach(img => {
+    if (img.complete && img.naturalHeight > 0) {
+      resizeGridItem(img.parentElement);
+    } else {
+      img.addEventListener('load', () => {
+        resizeGridItem(img.parentElement);
+      });
+    }
   });
 
-  gallery.imagesLoaded().progress( function() {
-    gallery.isotope('layout');
-  });
+  // Delay initial resize to ensure layout is complete
+  setTimeout(resizeAllGridItems, 200);
+  window.addEventListener('resize', resizeAllGridItems);
 });
 </script>
 <style>
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 400px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px;
+  gap: 8px;
+  align-content: flex-start;
+}
+
 .image-wrapper {
-  height: 150px;
-  padding: 4px;
+  padding: 0;
   border: 1px red solid;
-  display: inline-block;
-  vertical-align: top;
-  min-width: 80px;
-  max-width: 300px;
+  overflow: hidden;
+  width: 150px;
+  flex-shrink: 0;
 }
 
 .image-wrapper img {
-  height: 100%;
-  width: auto;
-  min-width: 80px;
-  max-width: 300px;
-  object-fit: contain;
-}
-
-.image-gallery {
-  height: 480px;
-  overflow-x: scroll;
-  overflow-y: visible;
-  max-width: 100%;
-  white-space: nowrap;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 </style>
