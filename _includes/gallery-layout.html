@@ -22,46 +22,6 @@ $(document).ready(function() {
     thumbnail: false,
     selector: '.image'
   });
-
-  function resizeGridItem(item) {
-    const img = item.querySelector('img');
-    if (!img || !img.complete) return;
-
-    const rowHeight = 10;
-    const rowGap = 8; // matches gap
-    const imgHeight = img.naturalHeight;
-    const imgWidth = img.naturalWidth;
-    const containerWidth = item.offsetWidth;
-
-    // Calculate scaled height based on container width
-    const scaledHeight = (imgHeight * containerWidth) / imgWidth;
-    const rowSpan = Math.ceil(scaledHeight / (rowHeight + rowGap));
-
-    item.style.gridRowEnd = `span ${rowSpan}`;
-  }
-
-  function resizeAllGridItems() {
-    setTimeout(() => {
-      const allItems = document.querySelectorAll('.image-wrapper');
-      allItems.forEach(resizeGridItem);
-    }, 100);
-  }
-
-  // Resize items when images load
-  const images = document.querySelectorAll('.image-wrapper img');
-  images.forEach(img => {
-    if (img.complete && img.naturalHeight > 0) {
-      resizeGridItem(img.parentElement);
-    } else {
-      img.addEventListener('load', () => {
-        resizeGridItem(img.parentElement);
-      });
-    }
-  });
-
-  // Delay initial resize to ensure layout is complete
-  setTimeout(resizeAllGridItems, 200);
-  window.addEventListener('resize', resizeAllGridItems);
 });
 </script>
 
