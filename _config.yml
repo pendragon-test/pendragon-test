@@ -19,7 +19,6 @@ collections:
   test:
     title: test
     output: true
-    permalink: stories/test.html
 defaults:
 - scope:
     path: ''
