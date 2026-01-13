@@ -18,24 +18,37 @@
 
 <script>
 $(document).ready(function() {
-  let gallery = $("#image-gallery{% if include.id_number %}-{{ include.id_number }}{% endif %}")
-
   lightGallery(document.getElementById('image-gallery'), {
     thumbnail: false,
     selector: '.image'
   });
-
-  gallery.isotope({
-    percentPosition: true,
-    columnWidth: '#gallery-sizer{% if include.id_number %}-{{ include.id_number }}{% endif %}',
-    itemSelector: '.image-wrapper',
-    layoutMode: "masonry"
-  });
 });
 </script>
+
 <style>
-.image-wrapper {
-  max-width: 20%;
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 400px;
+  overflow-x: auto;
+  overflow-y: hidden;
   padding: 8px;
+  gap: 8px;
+  align-content: flex-start;
+}
+
+.image-wrapper {
+  padding: 0;
+  overflow: hidden;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 </style>
