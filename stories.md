@@ -7,4 +7,4 @@ layout: default
 
 * [Santa Claire](stories/santa-claire.html)
 * [Other stories](stories/other-stories.html)
-* [test](stories/test.html)
+* [test](/test/testing-stories.html)
