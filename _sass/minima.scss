@@ -14,7 +14,7 @@ $spacing-unit:     30px !default;
 
 $text-color:       #fff !default;
 $background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
+$brand-color:      #5ca5ac !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -118,4 +118,81 @@ footer {
   margin-left: auto;
   margin-right: auto;
   transform: translateY(50%);
+}
+
+// Contact form styling
+#contact-form {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  div {
+    margin-bottom: $spacing-unit * 0.5;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: $text-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $brand-color;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  button[type="submit"] {
+    display: block;
+    padding: 12px 32px;
+    margin-top: $spacing-unit * 0.5;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $brand-color;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: $base-font-size;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken($brand-color, 10%);
+    }
+
+    &:active {
+      background-color: darken($brand-color, 15%);
+    }
+  }
+
+  // hCaptcha centering
+  .h-captcha {
+    margin-top: $spacing-unit * 0.5;
+    display: flex;
+    justify-content: center;
+  }
 }
