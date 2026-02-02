@@ -15,6 +15,7 @@ $spacing-unit:     30px !default;
 $text-color:       #fff !default;
 $background-color: #fdfdfd !default;
 $brand-color:      #5ca5ac !default;
+$outline-color:    #776651 !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -71,7 +72,7 @@ h1.flower-header {
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 3px #776651;
+  -webkit-text-stroke: 3px $outline-color;
 }
 
 a.page-link {

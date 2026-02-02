@@ -47,10 +47,12 @@
 
   @include media-query($on-palm) {
     position: absolute;
-    top: 9px;
+    top: 50%;
+    transform: translateY(-50%);
     right: $spacing-unit * 0.5;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    z-index: 100;
+    background-color: $brand-color;
+    border: 2px solid $outline-color;
     border-radius: 5px;
     text-align: right;
 
@@ -73,7 +75,7 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: #fff;
       }
     }
 
@@ -87,10 +89,19 @@
       padding-bottom: 5px;
     }
 
+    &:has(input:checked) {
+      top: calc(50% - 18px);
+      transform: none;
+    }
+
     .page-link {
       display: block;
       margin-left: 20px;
       padding: 5px 10px;
+      background: none;
+      -webkit-text-fill-color: #fff;
+      -webkit-text-stroke: 0;
+      color: #fff;
 
       &:not(:last-child) {
         margin-right: 0;
