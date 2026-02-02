@@ -5,6 +5,7 @@ layout: default
 
 # ![Stories](/uploads/Stories word.png)
 
-* [Santa Claire](stories/santa-claire.html)
-* [Other stories](stories/other-stories.html)
-* [test](test/testing-stories.html)
+<ul class="stories-list">
+  <li><a href="/stories/santa-claire.html">Santa Claire</a></li>
+  <li><a href="/stories/other-stories.html">Other Stories</a></li>
+</ul>
