@@ -61,9 +61,9 @@ $on-laptop:        800px !default;
     url("/assets/fonts/Copper-Penny-DTP.otf") format("opentype");
 }
 
-h1.flower-header {
+h1.page-heading {
   font-family: "Copper Penny";
-  font-size: 90pt;
+  font-size: 50px;
   background-image:
     url("/assets/images/text-mask.png"),
     linear-gradient(#13c1d1, #5ca5ac);
@@ -72,7 +72,7 @@ h1.flower-header {
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 3px $outline-color;
+  -webkit-text-stroke: 1px $outline-color;
 }
 
 a.page-link {
@@ -160,6 +160,10 @@ footer {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  padding: $spacing-unit;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid $outline-color;
+  border-radius: 8px;
 
   div {
     margin-bottom: $spacing-unit * 0.5;
@@ -176,22 +180,22 @@ footer {
   textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: $text-color;
+    border: 2px solid $outline-color;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
     font-family: $base-font-family;
     font-size: $base-font-size;
     box-sizing: border-box;
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.6);
+      color: #999;
     }
 
     &:focus {
       outline: none;
       border-color: $brand-color;
-      background-color: rgba(255, 255, 255, 0.25);
+      background-color: #fff;
     }
   }
 
@@ -206,21 +210,21 @@ footer {
     margin-top: $spacing-unit * 0.5;
     margin-left: auto;
     margin-right: auto;
-    background-color: $brand-color;
+    background: linear-gradient(#13c1d1, #5ca5ac);
     color: #fff;
-    border: none;
-    border-radius: 3px;
+    border: 2px solid $outline-color;
+    border-radius: 8px;
     font-size: $base-font-size;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: filter 0.2s ease;
 
     &:hover {
-      background-color: darken($brand-color, 10%);
+      filter: brightness(1.1);
     }
 
     &:active {
-      background-color: darken($brand-color, 15%);
+      filter: brightness(0.9);
     }
   }
 
