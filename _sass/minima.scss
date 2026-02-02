@@ -85,6 +85,7 @@ a.page-link {
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px #776651;
+  text-decoration-color: $brand-color;
 }
 
 // Stuff I added, not sure how best to organize scss yet
