@@ -2,6 +2,9 @@
 title: Pendragon
 timezone: UTC
 collections:
+  collection-test:
+    title: Collection test
+    output: true
   other-stories:
     title: Other stories
     output: true
@@ -15,6 +18,9 @@ collections:
     sort_by: date
   uploads:
     title: Uploads
+    output: true
+  short-stories:
+    title: short stories
     output: true
   test:
     title: test
