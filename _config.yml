@@ -11,8 +11,8 @@ collections:
   uploads:
     title: Uploads
     output: true
-  novelas:
-    title: novelas
+  novels:
+    title: novels
     output: true
     sort_by: date
   short-stories:
