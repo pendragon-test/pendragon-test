@@ -12,13 +12,13 @@ collections:
   posts:
     title: Posts
     output: true
-  santa-claire:
-    title: Santa Claire
-    output: true
-    sort_by: date
   uploads:
     title: Uploads
     output: true
+  novela:
+    title: novelas
+    output: true
+    sort_by: date
   short-stories:
     title: short stories
     output: true
