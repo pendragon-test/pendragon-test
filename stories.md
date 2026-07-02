@@ -7,6 +7,6 @@ layout: default
 
 <ul class="stories-list">
   <li><a href="/stories/novela.html">novela</a></li>
-  <li><a href="/stories/other-stories.html">Other Stories</a></li>
+  <li><a href="/stories/short-stories.html">short-stories</a></li>
 
 </ul>
