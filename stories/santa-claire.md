@@ -1,6 +1,6 @@
 ---
-title: Santa Claire
+title: Novelas
+collection: novela
 layout: posts-list
-collection: santa-claire
 ---
 
