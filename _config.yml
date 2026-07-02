@@ -19,9 +19,6 @@ collections:
     title: novelas
     output: true
     sort_by: date
-  short-stories:
-    title: short stories
-    output: true
   test:
     title: test
     output: true
