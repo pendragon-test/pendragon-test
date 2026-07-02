@@ -11,7 +11,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-  novela:
+  novelas:
     title: novelas
     output: true
     sort_by: date

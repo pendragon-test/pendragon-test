@@ -1,6 +1,6 @@
 ---
 title: Novelas
-collection: novela
+collection: novelas
 layout: posts-list
 ---
 
